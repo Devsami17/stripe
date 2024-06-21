@@ -42,14 +42,14 @@ margin-left: 5px;
 }
 .second-nav{
     height: 68px;
-    background-color: rgb(0, 85, 183);
+    background-color:#fff;
     position: fixed;
     width: 100%;
     z-index: 1000;
     top: 40px;
     left: 0;
     transition: top 0.1s ease-in-out;
-  
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     
 }
 .second-nav div{
@@ -57,7 +57,7 @@ margin-left: 5px;
     justify-content: space-between;
 }
 .second-nav div:nth-child(2) a{
-    color: #fff;
+    color: #000;
     text-decoration: none;
     font-size: 14px;
     text-transform: uppercase;
@@ -117,12 +117,20 @@ main{
     font-family: "Montserrat";
 }
 
-.hero-section{
+.hero-section,.hero-section-2{
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
 }
-.hero-section h2{
+.hero-section-2{
+    gap: 25px;
+    
+}
+.hero-section-2 img{
+    width: 100%;
+    object-fit: cover;
+}
+.hero-section h2 ,.hero-section-2 h2{
     font-size: 24px;
     font-weight: 500;
     line-height: 36px;
@@ -131,20 +139,27 @@ main{
     position: relative;
     margin-bottom: 30px;
 }
-.hero-section h2::before{
+.hero-section h2::before ,.hero-section-2 h2::before{
     content: "";
     position: absolute;
-    top: 110%;
+    top: 120%;
 left: 0;
 background-color: #0055b7;
 height: 3px;
-width: 40px;
+width: 100px;
 }
 .hero-section p{
     color: grey;
     font-family: "Lato";
     line-height: 24px;
     font-size: 16px;
+    font-weight: 400;
+}
+.hero-section-2 p{
+    color: grey;
+    font-family: "Lato";
+    line-height: 30px;
+    font-size: 17px;
     font-weight: 400;
 }
 .hero-section button{
@@ -179,11 +194,12 @@ footer{
     
 }
 footer h4{
-    font-size: 14px;
+    font-size: 20px;
     margin-bottom: 20px;
     font-family: "Montserrat";
 color: #fff;
 margin-left: 35px;
+font-weight: 600;
 }
 footer li{
     border-bottom: 1px solid #006db7;
@@ -206,8 +222,11 @@ footer p{
     font-family: "Lato";
     line-height: 24px;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
     margin-left: 35px;
+}
+.footer strong{
+    font-weight: 500;
 }
 .footer-input-bx{
     margin-left: 35px;
@@ -613,6 +632,16 @@ background-image: url("1.png");
                     background-image: url("6.png");
                     }
 @media only screen and (min-width:300px)and (max-width:1000px){
+    .hero-section-2 div{
+        width: 100%;
+    }
+    .hero-section-2{
+        flex-wrap: wrap;
+    }
+    .hero-section-2 p{
+        line-height: 24px;
+    font-size: 14px;
+    }
 .second-nav div:nth-child(2) a,.second-nav div:nth-child(2) button{
  display: none;   
 }
@@ -654,7 +683,7 @@ border-bottom: 0.5px solid grey;
 }
 .second-nav div:nth-child(2) i{
     font-size: 40px;
-    color: #fff;
+    color: #000;
     cursor: pointer;
     display: block;
 }
