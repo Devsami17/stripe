@@ -375,11 +375,13 @@
 
     window.addEventListener('scroll', function() {
         var secondNav = document.querySelector('.second-nav');
+        var respoHeader = document.querySelector('.responsive-header');
         if (window.pageYOffset > 0) {
             
-          
+          respoHeader.style.top="7%";
             secondNav.style.top = '0';
         } else {
+          respoHeader.style.top="11%";
            
         
             secondNav.style.top = '40px';
